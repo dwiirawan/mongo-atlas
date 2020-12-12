@@ -1,0 +1,18 @@
+Sumber: 
+https://howtocreateapps.com/how-to-connect-mongodb-atlas-with-node-js-using-mongoose/
+
+Prerequisite install
+npm init -y
+npm install express mongoose
+npm install -g nodemon
+
+Menjalankan
+nodemon server
+
+Menambahkan user
+post, menggunakan postman row json
+http://localhost:5000/user/add
+
+Melihat user
+get
+http://localhost:5000/user
