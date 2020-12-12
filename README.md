@@ -1,11 +1,11 @@
 # mongo-atlas
 Menghubungkan node.js dengan database cloud mongo
 
-Instalasi
+## Instalasi
 git clone https://github.com/dwiirawan/mongo-atlas.git
 
-Menjalankan Local MongoDB
+## Menjalankan Local MongoDB
 node local
 
-Menjalankan Cloud MongoDB
+## Menjalankan Cloud MongoDB:
 node server
