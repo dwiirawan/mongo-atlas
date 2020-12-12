@@ -3,12 +3,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/user.route');
+const custRouter = require('./routes/customer.route');
 
 const app = express();
 const port = 5000;
 
 app.use(express.json());
 app.use('/user', userRouter);
+app.use('/customer', custRouter);
 
 // const uri = "mongodb://dwi:hjlCShYHQOfrWWVb@teladancluster-shard-00-02.kflt7.mongodb.net:27017/open_db?retryWrites=true;"
 const uri = "mongodb://localhost:27017/admin?retryWrites=true;"
