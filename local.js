@@ -4,11 +4,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/user.route');
 const custRouter = require('./routes/customer.route');
+const cors = require('cors');
 
 const app = express();
 const port = 5000;
 
 app.use(express.json());
+app.use(cors());
 app.use('/user', userRouter);
 app.use('/customer', custRouter);
 

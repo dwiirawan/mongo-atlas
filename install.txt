@@ -16,3 +16,6 @@ http://localhost:5000/user/add
 Melihat user
 get
 http://localhost:5000/user
+
+Tambahkan cors agar API dapat dipakai oleh FrontEnd
+npm install cors
