@@ -1,11 +1,9 @@
-// user.model.js
-
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    username: {
+    remark: {
         type: String,
         required: true,
         unique: true,
@@ -16,8 +14,9 @@ const userSchema = new Schema({
     timestamps: true,
 });
 
-// users = model name (collections)
+// test = model name (collections)
 // create collections if not exis
-const User1 = mongoose.model('user', userSchema);
+// nama collections menjadi jamak yaitu tests
+const TestModel = mongoose.model('test', userSchema);
 
-module.exports = User1;
+module.exports = TestModel;

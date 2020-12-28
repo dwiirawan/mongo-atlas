@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/user.route');
 const custRouter = require('./routes/customer.route');
+const testRouter = require('./routes/test.route');
 const cors = require('cors');
 
 const app = express();
@@ -13,9 +14,10 @@ app.use(express.json());
 app.use(cors());
 app.use('/user', userRouter);
 app.use('/customer', custRouter);
+app.use('/tes', testRouter);
 
-// const uri = "mongodb://dwi:hjlCShYHQOfrWWVb@teladancluster-shard-00-02.kflt7.mongodb.net:27017/open_db?retryWrites=true;"
-const uri = "mongodb://localhost:27017/admin?retryWrites=true;"
+// const uri = "mongodb://localhost:27017/admin?retryWrites=true;"
+const uri = "mongodb://admin:myadminpassword@localhost:27017/admin?authSource=admin&readPreference=primary&ssl=false;"
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
